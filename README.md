@@ -15,7 +15,7 @@
 - `installDeps.sh`: Will install the dependencies in the `requirements.txt` file.
 
 ## Docker
-I replaced the `Vagrant` VM part with Docker to practice working with containers too.
+I replaced the `Vagrant` VM part with Docker to practice working with containers too.\
 The `docker-compose` file will start a **Postgresql** server listening on local port `5432` and two web administration tools.
 
 Several `volumes` are also created to persist database and web administration tool data.
@@ -48,3 +48,4 @@ Will listen on local port `8080`.
 
 **Use server details to log in.**
 
+***
