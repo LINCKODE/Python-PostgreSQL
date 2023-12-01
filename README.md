@@ -7,7 +7,7 @@
 `docker/compose.yml`: Docker compose file for Postgresql and web administration tools.
 `python/`: Python project.
 `arhive/`: Original files from course.
-`logIntoDB.sh`: Will connect to the **forum** database in Postgresql using `PSQL`.
+`logIntoDB.sh`: Will connect to the **forum** database in Postgresql using `PSQL`.  
 
 ## Python
 - `projectSetup.sh`: Create Python v-env.
