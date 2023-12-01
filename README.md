@@ -2,7 +2,7 @@
 
 > Python Flask practice project for learning PostgreSQL.
 
-[Udemy course](https://learn.udacity.com/courses/ud197)
+[Udacity course](https://learn.udacity.com/courses/ud197)
 
 `docker/compose.yml`: Docker compose file for Postgresql and web administration tools.\
 `python/`: Python project.\
