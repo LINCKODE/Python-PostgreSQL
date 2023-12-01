@@ -1,0 +1,49 @@
+services:
+    postgres:
+        container_name: "Database"
+        image: postgres
+        restart: always
+        volumes:
+            - postgres:/var/lib/postgresql/data
+        networks:
+            net:
+                ipv4_address: 172.16.238.10
+                ipv6_address: 2001:3984:3989::10
+        ports:
+            - "5432:5432"
+        environment:
+            - POSTGRES_USER=postgres
+            - POSTGRES_PASSWORD=password
+    pgadmin:
+        container_name: "PGAdmin"
+        image: dpage/pgadmin4
+        restart: always
+        volumes:
+            - pgadminConfig:/var/lib/pgadmin
+            - pgadmin4:/pgadmin4
+        networks:
+            - net
+        ports:
+            - 8000:80
+        environment:
+            - PGADMIN_DEFAULT_EMAIL=user@mail.net
+            - PGADMIN_DEFAULT_PASSWORD=password
+    adminer:
+        container_name: "Adminer"
+        image: adminer
+        restart: always
+        networks:
+            - net
+        ports:
+            - 8080:8080       
+volumes:
+    postgres:
+    pgadminConfig:
+    pgadmin4:
+networks:
+  net:
+    ipam:
+      driver: default
+      config:
+        - subnet: "172.16.238.0/24"
+        - subnet: "2001:3984:3989::/64"
